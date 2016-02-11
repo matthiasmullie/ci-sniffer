@@ -46,6 +46,15 @@ class FactoryTest extends PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
+        /*
+         * Deleting environment variables in HHVM is unreliable, so lets skip
+         * these tests on HHVN
+         * @see https://github.com/facebook/hhvm/issues/2533
+         */
+        if (strpos(phpversion(), 'hhvm') !== false) {
+            $this->markTestSkipped('Deleting environment variables in HHVM is unreliable.');
+        }
+
         $environments = static::environmentProvider();
         foreach ($environments as $data) {
             putenv($data[1]);
