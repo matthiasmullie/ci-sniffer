@@ -1,0 +1,35 @@
+{
+  "name": "matthiasmullie/ci-environment",
+  "type": "library",
+  "description": "Detects which CI environment the code is run in and lets you get common values",
+  "keywords": [
+    "php", "ci", "continuous integration", "environment"
+  ],
+  "homepage": "http://github.com/matthiasmullie/ci-environment",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Matthias Mullie",
+      "homepage": "http://www.mullie.eu",
+      "email": "ci-environment@mullie.eu",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^5.3|^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.8|^5.0",
+    "fabpot/php-cs-fixer": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MatthiasMullie\\CI\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MatthiasMullie\\CI\\Tests\\": "tests/"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+dependencies:
+  pre:
+    - pip install --user codecov
+
+  cache_directories:
+    - vendor
+
+test:
+  override:
+    - vendor/bin/phpunit
+
+  post:
+    - codecov
