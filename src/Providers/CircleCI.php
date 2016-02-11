@@ -34,7 +34,7 @@ class CircleCI implements Environment
      */
     public function getRepo()
     {
-        return 'https://github.com/'.getenv('CIRCLE_PROJECT_USERNAME').'/'.getenv('CIRCLE_PROJECT_REPONAME').'.git';
+        return 'git@github.com:'.getenv('CIRCLE_PROJECT_USERNAME').'/'.getenv('CIRCLE_PROJECT_REPONAME').'.git';
     }
 
     /**
