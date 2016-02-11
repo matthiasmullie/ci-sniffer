@@ -39,15 +39,9 @@ class EnvironmentTest extends PHPUnit_Framework_TestCase
         }
     }
 
-    public function testGetBranch()
-    {
-        if (!$this->isGitRepo()) {
-            $this->markTestSkipped("No git repo, can't compare.");
-        }
-
-        $none = new None();
-        $this->assertEquals($none->getBranch(), $this->environment->getBranch());
-    }
+    // branch can't be compared reliably: I can't fetch if by checking the git
+    // repo's active branch, because some (e.g. travis, codeship) checkout the
+    // specific commit, detached from any branch
 
     public function testGetCommit()
     {
