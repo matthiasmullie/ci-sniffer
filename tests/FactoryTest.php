@@ -77,6 +77,7 @@ class FactoryTest extends PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider environmentProvider
+     *
      * @param string $expect
      * @param string $env
      * @param string $value

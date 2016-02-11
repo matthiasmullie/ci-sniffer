@@ -17,7 +17,7 @@ interface Environment
     public static function isCurrent();
 
     /**
-     * Name of the CI provider (e.g. travis, circle, ...)
+     * Name of the CI provider (e.g. travis, circle, ...).
      *
      * @return string
      */

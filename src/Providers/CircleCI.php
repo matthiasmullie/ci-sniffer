@@ -6,6 +6,7 @@ use MatthiasMullie\CI\Environment;
 
 /**
  * @see https://circleci.com/docs/environment-variables
+ *
  * @author Matthias Mullie <ci-environment@mullie.eu>
  * @copyright Copyright (c) 2016, Matthias Mullie. All rights reserved.
  * @license LICENSE MIT

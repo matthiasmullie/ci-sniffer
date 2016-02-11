@@ -7,6 +7,7 @@ use MatthiasMullie\CI\Environment;
 /**
  * @see https://wiki.jenkins-ci.org/display/JENKINS/Building+a+software+project
  * @see https://wiki.jenkins-ci.org/display/JENKINS/GitHub+pull+request+builder+plugin#GitHubpullrequestbuilderplugin-EnvironmentVariables
+ *
  * @author Matthias Mullie <ci-environment@mullie.eu>
  * @copyright Copyright (c) 2016, Matthias Mullie. All rights reserved.
  * @license LICENSE MIT
