@@ -36,6 +36,8 @@ echo $provider->getCommit();
 echo $provider->getBuild();
 ```
 
+Or call the binary (`bin/ci-environment`) to get all info in JSON format.
+
 
 ## Installation
 
