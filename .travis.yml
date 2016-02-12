@@ -12,7 +12,8 @@ before_script:
   - composer self-update && composer install --dev
 
 script:
-  - ./vendor/bin/phpunit
+  - vendor/bin/phpunit
 
 after_success:
+  - bin/ci-environment
   - codecov

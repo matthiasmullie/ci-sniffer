@@ -10,4 +10,5 @@ test:
     - vendor/bin/phpunit
 
   post:
+    - bin/ci-environment
     - codecov

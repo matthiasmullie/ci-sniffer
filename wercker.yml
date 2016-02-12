@@ -15,3 +15,8 @@ build:
         name: run tests
         code: |
           vendor/bin/phpunit
+
+    - script:
+        name: output results
+        code: |
+          bin/ci-environment
