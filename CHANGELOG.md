@@ -4,6 +4,7 @@
 ## [1.0.1] - 2016-02-12
 ### Added
 - Detects Wercker
+- Detects Shippable
 
 
 ## [1.0.0] - 2016-02-11

@@ -72,6 +72,7 @@ class FactoryTest extends PHPUnit_Framework_TestCase
             array('jenkins', 'JENKINS_URL', 'http://something.something'),
             array('codeship', 'CI_NAME', 'codeship'),
             array('wercker', 'WERCKER_MAIN_PIPELINE_STARTED', '1399372237'),
+            array('shippable', 'SHIPPABLE', 'true'),
             array('none', 'NONE', 'nonexisting-environment'),
         );
     }
