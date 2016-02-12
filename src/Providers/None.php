@@ -32,6 +32,10 @@ class None implements Environment
      */
     public function getRepo()
     {
+        if (!$this->isGitRepo()) {
+            return '';
+        }
+
         return exec('git config --get remote.origin.url');
     }
 
@@ -40,6 +44,10 @@ class None implements Environment
      */
     public function getBranch()
     {
+        if (!$this->isGitRepo()) {
+            return '';
+        }
+
         exec('git branch', $branches);
         $branches = implode("\n", $branches);
         preg_match('/^\* (.+)$/m', $branches, $branch);
@@ -52,6 +60,10 @@ class None implements Environment
      */
     public function getCommit()
     {
+        if (!$this->isGitRepo()) {
+            return '';
+        }
+
         return exec('git log --pretty=format:"%H" -1');
     }
 
@@ -61,5 +73,14 @@ class None implements Environment
     public function getBuild()
     {
         return '';
+    }
+
+    /**
+     * @return bool
+     */
+    protected function isGitRepo()
+    {
+        exec("git status", $output, $status);
+        return $status === 0;
     }
 }
