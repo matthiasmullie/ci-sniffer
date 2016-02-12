@@ -5,6 +5,7 @@
 ### Added
 - Detects Wercker
 - Detects Shippable
+- Detects Appveyor
 
 
 ## [1.0.0] - 2016-02-11
