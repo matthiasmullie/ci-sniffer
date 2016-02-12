@@ -1,0 +1,17 @@
+box: boedy/wercker-php
+
+build:
+  steps:
+    - script:
+        name: install dependencies
+        code: |
+          composer install --no-interaction
+
+    # contrary to some other CI configs, I'm not letting this one push to
+    # codecovs since that needs python to install & I'm too lazy to setup my own
+    # wercker-php box with python...
+
+    - script:
+        name: run tests
+        code: |
+          vendor/bin/phpunit

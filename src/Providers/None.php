@@ -80,7 +80,8 @@ class None implements Environment
      */
     protected function isGitRepo()
     {
-        exec("git status", $output, $status);
+        exec('git status', $output, $status);
+
         return $status === 0;
     }
 }

@@ -24,7 +24,7 @@ class EnvironmentTest extends PHPUnit_Framework_TestCase
 
     public function testGetRepo()
     {
-        /**
+        /*
          * There isn't much we can test in terms of actual responses: whatever
          * environment we run it on, with every single commit, ... things will
          * change. Repo, however, should remain the same. So let's check if we
@@ -56,9 +56,10 @@ class EnvironmentTest extends PHPUnit_Framework_TestCase
     /**
      * @return bool
      */
-    public function isGitRepo()
+    protected function isGitRepo()
     {
-        exec("git status", $output, $status);
+        exec('git status', $output, $status);
+
         return $status === 0;
     }
 }

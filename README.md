@@ -13,6 +13,7 @@ Provider | Status
 Travis CI | [![](https://api.travis-ci.org/matthiasmullie/ci-environment.svg?branch=master)](https://travis-ci.org/matthiasmullie/ci-environment)
 Circle CI | [![](https://img.shields.io/circleci/project/matthiasmullie/ci-environment.svg)](https://circleci.com/gh/matthiasmullie/ci-environment)
 Codeship | [![](https://img.shields.io/codeship/d65fa110-b318-0133-2330-0e52fcdb9711/master.svg)](https://codeship.com/projects/133591)
+Wercker | [![](https://img.shields.io/wercker/ci/matthiasmullie/ci-environment.svg)](https://app.wercker.com/#applications/56bd9f9a239090c8360c43b5)
 Jenkins | Supported!
 
 
