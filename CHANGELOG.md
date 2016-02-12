@@ -6,10 +6,12 @@
 - Detects Wercker
 - Detects Shippable
 - Detects Appveyor
+- Add bin/ci-environment, which outputs data as json
 
 
 ## [1.0.0] - 2016-02-11
 ### Added
+- Report provider, repo url, branch, commit & build
 - Detects Travis CI
 - Detects Circle CI
 - Detects Codeship

@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+if (file_exists(__DIR__ . '/../../../autoload.php')) {
+    require_once __DIR__ . '/../../../autoload.php';
+} else {
+    require_once __DIR__.'/../vendor/autoload.php';
+}
+
+$factory = new \MatthiasMullie\CI\Factory();
+$environment = $factory->getCurrent();
+echo json_encode(array(
+    'provider' => $environment->getProvider(),
+    'repo' => $environment->getRepo(),
+    'branch' => $environment->getBranch(),
+    'commit' => $environment->getCommit(),
+    'build' => $environment->getBuild(),
+));

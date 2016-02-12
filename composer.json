@@ -31,5 +31,8 @@
     "psr-4": {
       "MatthiasMullie\\CI\\Tests\\": "tests/"
     }
-  }
+  },
+  "bin": [
+    "bin/ci-environment"
+  ]
 }
