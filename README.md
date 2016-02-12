@@ -30,6 +30,7 @@ echo $provider->getProvider();
 
 // outputs data about the thing being tested
 echo $provider->getRepo();
+echo $provider->getSlug();
 echo $provider->getBranch();
 echo $provider->getCommit();
 echo $provider->getBuild();

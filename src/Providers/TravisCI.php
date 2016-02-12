@@ -5,7 +5,7 @@ namespace MatthiasMullie\CI\Providers;
 use MatthiasMullie\CI\Environment;
 
 /**
- * @see https://docs.travis-ci.com/user/environment-variables/
+ * @see https://docs.travis-ci.com/user/environment-variables
  *
  * @author Matthias Mullie <ci-environment@mullie.eu>
  * @copyright Copyright (c) 2016, Matthias Mullie. All rights reserved.
@@ -35,6 +35,14 @@ class TravisCI implements Environment
     public function getRepo()
     {
         return 'https://github.com/'.getenv('TRAVIS_REPO_SLUG').'.git';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getSlug()
+    {
+        return getenv('TRAVIS_REPO_SLUG');
     }
 
     /**

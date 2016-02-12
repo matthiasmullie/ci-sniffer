@@ -40,6 +40,14 @@ class Wercker implements Environment
     /**
      * {@inheritdoc}
      */
+    public function getSlug()
+    {
+        return getenv('WERCKER_GIT_OWNER').'/'.getenv('WERCKER_GIT_REPOSITORY');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getBranch()
     {
         return getenv('WERCKER_GIT_BRANCH');

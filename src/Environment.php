@@ -31,6 +31,13 @@ interface Environment
     public function getRepo();
 
     /**
+     * Slug of the repository being tested.
+     *
+     * @return string
+     */
+    public function getSlug();
+
+    /**
      * Name of the git branch being tested.
      *
      * @return string

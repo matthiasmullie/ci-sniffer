@@ -40,6 +40,14 @@ class Appveyor implements Environment
     /**
      * {@inheritdoc}
      */
+    public function getSlug()
+    {
+        return getenv('APPVEYOR_REPO_NAME');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getBranch()
     {
         return getenv('APPVEYOR_REPO_BRANCH');

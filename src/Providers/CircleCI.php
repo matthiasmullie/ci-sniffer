@@ -40,6 +40,14 @@ class CircleCI implements Environment
     /**
      * {@inheritdoc}
      */
+    public function getSlug()
+    {
+        return getenv('CIRCLE_PROJECT_USERNAME').'/'.getenv('CIRCLE_PROJECT_REPONAME');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getBranch()
     {
         return getenv('CIRCLE_BRANCH');

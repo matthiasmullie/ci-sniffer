@@ -7,6 +7,7 @@
 - Detects Shippable
 - Detects Appveyor
 - Add bin/ci-environment, which outputs data as json
+- Report repo slug
 
 
 ## [1.0.0] - 2016-02-11

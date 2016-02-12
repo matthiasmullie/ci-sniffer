@@ -40,6 +40,14 @@ class Shippable implements Environment
     /**
      * {@inheritdoc}
      */
+    public function getSlug()
+    {
+        return getenv('REPO_NAME');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getBranch()
     {
         return getenv('BRANCH');

@@ -24,19 +24,17 @@ class EnvironmentTest extends PHPUnit_Framework_TestCase
 
     public function testGetRepo()
     {
-        /*
-         * There isn't much we can test in terms of actual responses: whatever
-         * environment we run it on, with every single commit, ... things will
-         * change. Repo, however, should remain the same. So let's check if we
-         * find a valid result there, then we at least know the environment
-         * detection works & repo can be retrieved correctly.
-         */
         $this->assertContains('matthiasmullie/ci-environment', $this->environment->getRepo());
 
         if ($this->isGitRepo()) {
             $none = new None();
             $this->assertEquals($none->getRepo(), $this->environment->getRepo());
         }
+    }
+
+    public function testGetSlug()
+    {
+        $this->assertEquals('matthiasmullie/ci-environment', $this->environment->getSlug());
     }
 
     // branch can't be compared reliably: I can't fetch if by checking the git

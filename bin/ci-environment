@@ -11,6 +11,7 @@ $environment = $factory->getCurrent();
 echo json_encode(array(
     'provider' => $environment->getProvider(),
     'repo' => $environment->getRepo(),
+    'slug' => $environment->getSlug(),
     'branch' => $environment->getBranch(),
     'commit' => $environment->getCommit(),
     'build' => $environment->getBuild(),

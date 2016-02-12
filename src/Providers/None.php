@@ -58,6 +58,20 @@ class None implements Environment
     /**
      * {@inheritdoc}
      */
+    public function getSlug()
+    {
+        // when using any of the popular cloud git providers (or anything that's
+        // modeled after the same username\project model), the repo name will
+        // likely be included in this fashion... at least we can try :)
+        $url = $this->getRepo();
+        $found = preg_match('/([^:\/]+\/[^:\/]+?)(\.git|$)/', $url, $matches);
+
+        return $found ? $matches[1] : '';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getCommit()
     {
         if (!$this->isGitRepo()) {
