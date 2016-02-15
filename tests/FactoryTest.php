@@ -74,6 +74,7 @@ class FactoryTest extends PHPUnit_Framework_TestCase
             array('wercker', 'WERCKER_MAIN_PIPELINE_STARTED', '1399372237'),
             array('shippable', 'SHIPPABLE', 'true'),
             array('appveyor', 'APPVEYOR', 'True'),
+            array('drone', 'DRONE', 'true'),
             array('none', 'NONE', 'nonexisting-environment'),
         );
     }

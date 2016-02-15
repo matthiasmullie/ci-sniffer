@@ -16,6 +16,7 @@ Codeship | [![](https://img.shields.io/codeship/d65fa110-b318-0133-2330-0e52fcdb
 Wercker | [![](https://img.shields.io/wercker/ci/matthiasmullie/ci-environment.svg)](https://app.wercker.com/#applications/56bd9f9a239090c8360c43b5)
 Shippable | [![](https://img.shields.io/shippable/56bdaae41895ca447473e35d.svg)](https://app.shippable.com/projects/56bdaae41895ca447473e35d)
 Appveyor | [![](https://img.shields.io/appveyor/ci/matthiasmullie/ci-environment.svg)](https://ci.appveyor.com/project/matthiasmullie/ci-environment)
+Drone | [![](https://drone.io/github.com/matthiasmullie/ci-environment/status.png)](https://drone.io/github.com/matthiasmullie/ci-environment)
 Jenkins | Supported!
 
 

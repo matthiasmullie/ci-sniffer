@@ -1,6 +1,11 @@
 # Changelog
 
 
+## [1.0.2] - 2016-02-15
+### Added
+- Detects Drone
+
+
 ## [1.0.1] - 2016-02-12
 ### Added
 - Detects Wercker
@@ -21,3 +26,4 @@
 
 [1.0.0]: https://github.com/matthiasmullie/ci-environment/compare/ab538de31ace283fcbe74e4d66a67d0c229af5a1...1.0.0
 [1.0.1]: https://github.com/matthiasmullie/ci-environment/compare/1.0.0...1.0.1
+[1.0.2]: https://github.com/matthiasmullie/ci-environment/compare/1.0.1...1.0.2
