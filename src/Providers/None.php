@@ -78,14 +78,9 @@ class None implements Environment
             return '';
         }
 
-        // also fetch pull request refs
-        exec('git config --add remote.origin.fetch "+refs/pull/*/head:refs/remotes/origin/pr/*"');
-        exec('git fetch origin');
-
-        // now find the PR with the current commit in there
-        $refs = shell_exec('git show-ref');
+        $head = shell_exec('cat .git/FETCH_HEAD');
         $commit = preg_quote($this->getCommit(), '/');
-        preg_match("/^$commit refs\\/remotes\\/origin\\/pr\\/(.+)$/m", $refs, $match);
+        preg_match("/^$commit\\s+'refs\\/pull\\/(.+)\\/head'/m", $head, $match);
 
         return isset($match[1]) ? $match[1] : '';
     }
