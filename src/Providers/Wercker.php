@@ -50,7 +50,7 @@ class Wercker implements Environment
      */
     public function getBranch()
     {
-        return getenv('WERCKER_GIT_BRANCH');
+        return $this->getPullRequest() === '' ? getenv('WERCKER_GIT_BRANCH') : '';
     }
 
     /**
@@ -63,11 +63,12 @@ class Wercker implements Environment
      */
     public function getPullRequest()
     {
-        exec('cat ~/.bash_history', $output);
-        var_dump($output);
-        $output = implode("\n", $output);
+        $commit = preg_quote($this->getCommit(), '/');
 
-        preg_match('/^git fetch origin \+refs\/pull\/(.+?)\/head\/:$/m', $output, $match);
+        // don't have permissions to do fetch all PR refs (like in None), but we
+        // know Wercker has just fetched this particular PR...
+        $head = shell_exec('cat .git/FETCH_HEAD');
+        preg_match("/^$commit\\s+'refs\\/pull\\/(.+)\\/head'/m", $head, $match);
 
         return isset($match[1]) ? $match[1] : '';
     }
