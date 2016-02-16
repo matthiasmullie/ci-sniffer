@@ -5,7 +5,7 @@ namespace MatthiasMullie\CI\Providers;
 use MatthiasMullie\CI\Environment;
 
 /**
- * @see https://docs.snap-ci.com/environment-variables/
+ * @see https://docs.snap-ci.com/environment-variables
  *
  * @author Matthias Mullie <ci-environment@mullie.eu>
  * @copyright Copyright (c) 2016, Matthias Mullie. All rights reserved.
@@ -56,7 +56,15 @@ class SnapCI implements Environment
      */
     public function getBranch()
     {
-        return getenv('SNAP_BRANCH');
+        return getenv('SNAP_BRANCH') ?: '';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getPullRequest()
+    {
+        return getenv('SNAP_PULL_REQUEST_NUMBER') ?: '';
     }
 
     /**

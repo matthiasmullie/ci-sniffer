@@ -45,6 +45,13 @@ interface Environment
     public function getBranch();
 
     /**
+     * Number of the pull request (or empty string if no pull request).
+     *
+     * @return string
+     */
+    public function getPullRequest();
+
+    /**
      * Hash of the commit being tested.
      *
      * @return string

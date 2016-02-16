@@ -54,6 +54,25 @@ class Wercker implements Environment
     }
 
     /**
+     * @todo Current code is a workaround until Wercker adds an environment
+     * variable to fetch it.
+     *
+     * @see https://github.com/wercker/support/issues/19
+     *
+     * {@inheritdoc}
+     */
+    public function getPullRequest()
+    {
+        exec('cat ~/.bash_history', $output);
+        var_dump($output);
+        $output = implode("\n", $output);
+
+        preg_match('/^git fetch origin \+refs\/pull\/(.+?)\/head\/:$/m', $output, $match);
+
+        return isset($match[1]) ? $match[1] : '';
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function getCommit()
