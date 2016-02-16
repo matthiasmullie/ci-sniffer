@@ -63,15 +63,13 @@ class Wercker implements Environment
      */
     public function getPullRequest()
     {
-        $output = shell_exec('git branch -v');
-        var_dump($output);
-        $output = shell_exec('git remote -v');
-        var_dump($output);
-        $output = shell_exec('git reflog');
-        var_dump($output);
-        $output = shell_exec('git show-ref');
-        var_dump($output);
-        preg_match('/^git fetch origin \+refs\/pull\/(.+?)\/head\/:$/m', $output, $match);
+        $commit = preg_quote($this->getCommit(), '/');
+
+        // don't have permissions to do fetch all PR refs (like in None), but we
+        // know Wercker has just fetched this particular PR...
+        $head = shell_exec('cat .git/FETCH_HEAD');
+        var_dump($head);
+        preg_match("/^$commit\\s+'refs/pull/(.+)/head'/m", $head, $match);
 
         return isset($match[1]) ? $match[1] : '';
     }
