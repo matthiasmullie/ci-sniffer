@@ -56,6 +56,15 @@ class Shippable implements Environment
     /**
      * {@inheritdoc}
      */
+    public function getPullRequest()
+    {
+        $pr = getenv('PULL_REQUEST');
+        return $pr !== 'false' ? $pr : '';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getCommit()
     {
         return getenv('COMMIT');

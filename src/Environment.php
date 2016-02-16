@@ -38,11 +38,18 @@ interface Environment
     public function getSlug();
 
     /**
-     * Name of the git branch being tested.
+     * Name of the git branch being tested (or empty if in pull request).
      *
      * @return string
      */
     public function getBranch();
+
+    /**
+     * Number of the pull request (or empty string if no pull request).
+     *
+     * @return string
+     */
+    public function getPullRequest();
 
     /**
      * Hash of the commit being tested.

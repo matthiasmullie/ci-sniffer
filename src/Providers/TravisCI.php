@@ -50,7 +50,16 @@ class TravisCI implements Environment
      */
     public function getBranch()
     {
-        return getenv('TRAVIS_BRANCH');
+        return $this->getPullRequest() === '' ? getenv('TRAVIS_BRANCH') : '';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getPullRequest()
+    {
+        $pr = getenv('TRAVIS_PULL_REQUEST');
+        return $pr !== 'false' ? $pr : '';
     }
 
     /**

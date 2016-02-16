@@ -50,7 +50,26 @@ class Wercker implements Environment
      */
     public function getBranch()
     {
-        return getenv('WERCKER_GIT_BRANCH');
+        return $this->getPullRequest() === '' ? getenv('WERCKER_GIT_BRANCH') : '';
+    }
+
+    /**
+     * @todo Current code is a workaround until Wercker adds an environment
+     * variable to fetch it.
+     *
+     * @see https://github.com/wercker/support/issues/19
+     *
+     * {@inheritdoc}
+     */
+    public function getPullRequest()
+    {
+        // don't have permissions to do fetch all PR refs (like in None), but we
+        // know Wercker has just fetched this particular PR...
+        $head = shell_exec('cat .git/FETCH_HEAD');
+        $commit = preg_quote($this->getCommit(), '/');
+        preg_match("/^$commit\\s+'refs\\/pull\\/(.+)\\/head'/m", $head, $match);
+
+        return isset($match[1]) ? $match[1] : '';
     }
 
     /**

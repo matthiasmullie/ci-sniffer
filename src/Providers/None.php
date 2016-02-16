@@ -72,6 +72,27 @@ class None implements Environment
     /**
      * {@inheritdoc}
      */
+    public function getPullRequest()
+    {
+        if (!$this->isGitRepo()) {
+            return '';
+        }
+
+        // also fetch pull request refs
+        exec('git config --add remote.origin.fetch "+refs/pull/*/head:refs/remotes/origin/pr/*"');
+        exec('git fetch origin');
+
+        // now find the PR with the current commit in there
+        $refs = shell_exec('git show-ref');
+        $commit = preg_quote($this->getCommit(), '/');
+        preg_match("/^$commit refs\\/remotes\\/origin\\/pr\\/(.+)$/m", $refs, $match);
+
+        return isset($match[1]) ? $match[1] : '';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getCommit()
     {
         if (!$this->isGitRepo()) {

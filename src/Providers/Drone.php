@@ -6,6 +6,7 @@ use MatthiasMullie\CI\Environment;
 
 /**
  * @see http://docs.drone.io/env.html
+ * @see https://github.com/drone/drone/blob/a339b54905465cefe1ffed6eb80b2c7ef7a5c6d8/shared/build/build.go#L477
  *
  * @author Matthias Mullie <ci-environment@mullie.eu>
  * @copyright Copyright (c) 2016, Matthias Mullie. All rights reserved.
@@ -56,7 +57,15 @@ class Drone implements Environment
      */
     public function getBranch()
     {
-        return getenv('DRONE_BRANCH');
+        return $this->getPullRequest() === '' ? getenv('DRONE_BRANCH') : '';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getPullRequest()
+    {
+        return getenv('DRONE_PR');
     }
 
     /**
