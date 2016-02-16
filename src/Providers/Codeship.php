@@ -61,6 +61,15 @@ class Codeship implements Environment
     /**
      * {@inheritdoc}
      */
+    public function getPullRequest()
+    {
+        $pr = getenv('CI_PULL_REQUEST');
+        return $pr !== 'false' ? $pr : '';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getCommit()
     {
         return getenv('CI_COMMIT_ID');

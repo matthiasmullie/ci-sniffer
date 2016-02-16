@@ -5,6 +5,7 @@
 ### Added
 - Detects Drone
 - Detects Snap CI
+- Report pull request number
 
 
 ## [1.0.1] - 2016-02-12
