@@ -55,7 +55,21 @@ class Codeship implements Environment
      */
     public function getBranch()
     {
-        return getenv('CI_BRANCH');
+        return $this->getPullRequest() === '' ? getenv('CI_BRANCH') : '';
+    }
+
+    /**
+     * @todo Just guessing here: building from PRs from forked repos is not yet
+     * possible, so we'll have to see what it looks like in the future.
+     *
+     * @see https://github.com/codeship/documentation/issues/250
+     *
+     * {@inheritdoc}
+     */
+    public function getPullRequest()
+    {
+        $pr = getenv('CI_PULL_REQUEST');
+        return $pr !== 'false' ? $pr : '';
     }
 
     /**

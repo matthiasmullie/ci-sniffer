@@ -50,7 +50,15 @@ class CircleCI implements Environment
      */
     public function getBranch()
     {
-        return getenv('CIRCLE_BRANCH');
+        return $this->getPullRequest() === '' ? getenv('CIRCLE_BRANCH') : '';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getPullRequest()
+    {
+        return getenv('CIRCLE_PR_NUMBER') ?: '';
     }
 
     /**

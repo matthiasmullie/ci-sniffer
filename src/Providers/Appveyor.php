@@ -50,7 +50,15 @@ class Appveyor implements Environment
      */
     public function getBranch()
     {
-        return getenv('APPVEYOR_REPO_BRANCH');
+        return $this->getPullRequest() === '' ? getenv('APPVEYOR_REPO_BRANCH') : '';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getPullRequest()
+    {
+        return getenv('APPVEYOR_PULL_REQUEST_NUMBER') ?: '';
     }
 
     /**
