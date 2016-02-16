@@ -22,6 +22,12 @@ class EnvironmentTest extends PHPUnit_Framework_TestCase
         $this->environment = $factory->getCurrent();
     }
 
+    public function testNotNone()
+    {
+        $msg = 'Asserts a provider is found. Fails on local machine.';
+        $this->assertNotEquals('none', $this->environment->getProvider(), $msg);
+    }
+
     public function testGetRepo()
     {
         $this->assertContains('matthiasmullie/ci-environment', $this->environment->getRepo());
