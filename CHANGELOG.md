@@ -1,11 +1,15 @@
 # Changelog
 
 
-## [1.0.2] - 2016-02-15
+## [1.0.2] - 2016-02-16
 ### Added
 - Detects Drone
 - Detects Snap CI
 - Report pull request number
+
+### Fixed
+- Don't show any branch when on PR
+- Don't print error output when not in git repo
 
 
 ## [1.0.1] - 2016-02-12
