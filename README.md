@@ -10,15 +10,15 @@
 
 Provider | Status
 --- | ---
-Travis CI | [![](https://api.travis-ci.org/matthiasmullie/ci-environment.svg?branch=master)](https://travis-ci.org/matthiasmullie/ci-environment)
-Circle CI | [![](https://img.shields.io/circleci/project/matthiasmullie/ci-environment.svg)](https://circleci.com/gh/matthiasmullie/ci-environment)
-Codeship | [![](https://img.shields.io/codeship/d65fa110-b318-0133-2330-0e52fcdb9711/master.svg)](https://codeship.com/projects/133591)
-Wercker | [![](https://img.shields.io/wercker/ci/matthiasmullie/ci-environment.svg)](https://app.wercker.com/#applications/56bd9f9a239090c8360c43b5)
-Shippable | [![](https://img.shields.io/shippable/56bdaae41895ca447473e35d.svg)](https://app.shippable.com/projects/56bdaae41895ca447473e35d)
-Appveyor | [![](https://img.shields.io/appveyor/ci/matthiasmullie/ci-environment.svg)](https://ci.appveyor.com/project/matthiasmullie/ci-environment)
+Appveyor | [![](https://ci.appveyor.com/api/projects/status/c4x14o1v81bgodv0?svg=true)](https://ci.appveyor.com/project/matthiasmullie/ci-environment)
+Circle CI | [![(https://circleci.com/gh/matthiasmullie/ci-environment.svg?style=svg)](https://circleci.com/gh/matthiasmullie/ci-environment)
+Codeship | [![](https://codeship.com/projects/d65fa110-b318-0133-2330-0e52fcdb9711/status?branch=master)](https://codeship.com/projects/133591)
 Drone | [![](https://drone.io/github.com/matthiasmullie/ci-environment/status.png)](https://drone.io/github.com/matthiasmullie/ci-environment)
-Snap CI | [![](https://snap-ci.com/matthiasmullie/ci-environment/branch/master/build_image)](https://snap-ci.com/matthiasmullie/ci-environment)
 Jenkins | Supported!
+Shippable | [![](https://api.shippable.com/projects/56bdaae41895ca447473e35d/badge/master)](https://app.shippable.com/projects/56bdaae41895ca447473e35d)
+Snap CI | [![](https://snap-ci.com/matthiasmullie/ci-environment/branch/master/build_image)](https://snap-ci.com/matthiasmullie/ci-environment)
+Travis CI | [![](https://api.travis-ci.org/matthiasmullie/ci-environment.svg?branch=master)](https://travis-ci.org/matthiasmullie/ci-environment)
+Wercker | [![](https://app.wercker.com/status/28ed29f990ed347f218680c4d08369c8/s)](https://app.wercker.com/project/bykey/28ed29f990ed347f218680c4d08369c8)
 
 
 ## Example usage
