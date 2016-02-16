@@ -69,6 +69,8 @@ class Wercker implements Environment
         var_dump($output);
         $output = shell_exec('git reflog');
         var_dump($output);
+        $output = shell_exec('git show-ref');
+        var_dump($output);
         preg_match('/^git fetch origin \+refs\/pull\/(.+?)\/head\/:$/m', $output, $match);
 
         return isset($match[1]) ? $match[1] : '';
