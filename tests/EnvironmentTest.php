@@ -57,6 +57,15 @@ class EnvironmentTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($none->getCommit(), $this->environment->getCommit());
     }
 
+    public function testNoBranchAndPullRequest()
+    {
+        $branch = $this->environment->getBranch();
+        $pr = $this->environment->getPullRequest();
+
+        $this->assertTrue($branch !== '' || $pr !== '', 'Branch or PR must be set.');
+        $this->assertFalse($branch !== '' && $pr !== '', 'Only branch or PR can be set.');
+    }
+
     /**
      * @return bool
      */
