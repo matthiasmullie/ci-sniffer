@@ -36,7 +36,7 @@ class None implements Environment
             return '';
         }
 
-        return exec('git config --get remote.origin.url');
+        return shell_exec('git config --get remote.origin.url');
     }
 
     /**
@@ -62,8 +62,7 @@ class None implements Environment
             return '';
         }
 
-        exec('git branch', $branches);
-        $branches = implode("\n", $branches);
+        $branches = shell_exec('git branch');
         preg_match('/^\* (.+)$/m', $branches, $branch);
 
         return isset($branch) ? $branch[1] : '';
@@ -94,7 +93,7 @@ class None implements Environment
             return '';
         }
 
-        return exec('git log --pretty=format:"%H" -1');
+        return shell_exec('git log --pretty=format:"%H" -1');
     }
 
     /**
@@ -110,7 +109,7 @@ class None implements Environment
      */
     protected function isGitRepo()
     {
-        exec('git status', $output, $status);
+        exec('git status 2>&1', $output, $status);
 
         return $status === 0;
     }

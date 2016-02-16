@@ -34,7 +34,7 @@ class Appveyor implements Environment
      */
     public function getRepo()
     {
-        return exec('git config --get remote.origin.url');
+        return shell_exec('git config --get remote.origin.url');
     }
 
     /**
