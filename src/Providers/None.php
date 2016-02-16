@@ -72,6 +72,14 @@ class None implements Environment
     /**
      * {@inheritdoc}
      */
+    public function getPullRequest()
+    {
+        return '';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getCommit()
     {
         if (!$this->isGitRepo()) {

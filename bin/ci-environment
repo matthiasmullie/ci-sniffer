@@ -13,6 +13,7 @@ echo json_encode(array(
     'repo' => $environment->getRepo(),
     'slug' => $environment->getSlug(),
     'branch' => $environment->getBranch(),
+    'pr' => $environment->getPullRequest(),
     'commit' => $environment->getCommit(),
     'build' => $environment->getBuild(),
 ));

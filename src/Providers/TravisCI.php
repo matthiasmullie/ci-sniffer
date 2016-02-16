@@ -56,6 +56,15 @@ class TravisCI implements Environment
     /**
      * {@inheritdoc}
      */
+    public function getPullRequest()
+    {
+        $pr = getenv('TRAVIS_PULL_REQUEST');
+        return $pr !== 'false' ? $pr : '';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getCommit()
     {
         return getenv('TRAVIS_COMMIT');
