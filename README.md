@@ -11,7 +11,7 @@
 Provider | Status
 --- | ---
 Appveyor | [![](https://ci.appveyor.com/api/projects/status/c4x14o1v81bgodv0?svg=true)](https://ci.appveyor.com/project/matthiasmullie/ci-environment)
-Circle CI | [![(https://circleci.com/gh/matthiasmullie/ci-environment.svg?style=svg)](https://circleci.com/gh/matthiasmullie/ci-environment)
+Circle CI | [![](https://circleci.com/gh/matthiasmullie/ci-environment.svg?style=svg)](https://circleci.com/gh/matthiasmullie/ci-environment)
 Codeship | [![](https://codeship.com/projects/d65fa110-b318-0133-2330-0e52fcdb9711/status?branch=master)](https://codeship.com/projects/133591)
 Drone | [![](https://drone.io/github.com/matthiasmullie/ci-environment/status.png)](https://drone.io/github.com/matthiasmullie/ci-environment)
 Jenkins | Supported!
