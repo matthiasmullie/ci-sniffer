@@ -4,6 +4,7 @@
 ## [1.0.2] - 2016-02-15
 ### Added
 - Detects Drone
+- Detects Snap CI
 
 
 ## [1.0.1] - 2016-02-12

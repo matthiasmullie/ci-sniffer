@@ -17,6 +17,7 @@ Wercker | [![](https://img.shields.io/wercker/ci/matthiasmullie/ci-environment.s
 Shippable | [![](https://img.shields.io/shippable/56bdaae41895ca447473e35d.svg)](https://app.shippable.com/projects/56bdaae41895ca447473e35d)
 Appveyor | [![](https://img.shields.io/appveyor/ci/matthiasmullie/ci-environment.svg)](https://ci.appveyor.com/project/matthiasmullie/ci-environment)
 Drone | [![](https://drone.io/github.com/matthiasmullie/ci-environment/status.png)](https://drone.io/github.com/matthiasmullie/ci-environment)
+Snap CI | [![](https://snap-ci.com/matthiasmullie/ci-environment/branch/master/build_image)](https://snap-ci.com/matthiasmullie/ci-environment)
 Jenkins | Supported!
 
 

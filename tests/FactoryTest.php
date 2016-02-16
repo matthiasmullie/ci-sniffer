@@ -75,6 +75,7 @@ class FactoryTest extends PHPUnit_Framework_TestCase
             array('shippable', 'SHIPPABLE', 'true'),
             array('appveyor', 'APPVEYOR', 'True'),
             array('drone', 'DRONE', 'true'),
+            array('snap', 'SNAP_CI', 'true'),
             array('none', 'NONE', 'nonexisting-environment'),
         );
     }

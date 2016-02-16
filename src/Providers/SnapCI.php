@@ -5,18 +5,20 @@ namespace MatthiasMullie\CI\Providers;
 use MatthiasMullie\CI\Environment;
 
 /**
+ * @see https://docs.snap-ci.com/environment-variables/
+ *
  * @author Matthias Mullie <ci-environment@mullie.eu>
  * @copyright Copyright (c) 2016, Matthias Mullie. All rights reserved.
  * @license LICENSE MIT
  */
-class None implements Environment
+class SnapCI implements Environment
 {
     /**
      * {@inheritdoc}
      */
     public static function isCurrent()
     {
-        return false;
+        return getenv('SNAP_CI') === 'true';
     }
 
     /**
@@ -24,7 +26,7 @@ class None implements Environment
      */
     public function getProvider()
     {
-        return 'none';
+        return 'snap';
     }
 
     /**
@@ -32,10 +34,6 @@ class None implements Environment
      */
     public function getRepo()
     {
-        if (!$this->isGitRepo()) {
-            return '';
-        }
-
         return exec('git config --get remote.origin.url');
     }
 
@@ -58,15 +56,7 @@ class None implements Environment
      */
     public function getBranch()
     {
-        if (!$this->isGitRepo()) {
-            return '';
-        }
-
-        exec('git branch', $branches);
-        $branches = implode("\n", $branches);
-        preg_match('/^\* (.+)$/m', $branches, $branch);
-
-        return isset($branch) ? $branch[1] : '';
+        return getenv('SNAP_BRANCH');
     }
 
     /**
@@ -74,11 +64,7 @@ class None implements Environment
      */
     public function getCommit()
     {
-        if (!$this->isGitRepo()) {
-            return '';
-        }
-
-        return exec('git log --pretty=format:"%H" -1');
+        return getenv('SNAP_COMMIT');
     }
 
     /**
@@ -86,16 +72,6 @@ class None implements Environment
      */
     public function getBuild()
     {
-        return '';
-    }
-
-    /**
-     * @return bool
-     */
-    protected function isGitRepo()
-    {
-        exec('git status', $output, $status);
-
-        return $status === 0;
+        return getenv('SNAP_PIPELINE_COUNTER');
     }
 }

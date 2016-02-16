@@ -42,8 +42,9 @@ class Drone implements Environment
      */
     public function getSlug()
     {
-        // only GitHub & BitBucket are supported; both will have repo urls that
-        // include the project slug in this format
+        // when using any of the popular cloud git providers (or anything that's
+        // modeled after the same username\project model), the repo name will
+        // likely be included in this fashion... at least we can try :)
         $url = $this->getRepo();
         preg_match('/([^:\/]+\/[^:\/]+?)(\.git|$)/', $url, $matches);
 
