@@ -56,6 +56,14 @@ class CircleCI implements Environment
     /**
      * {@inheritdoc}
      */
+    public function getPullRequest()
+    {
+        return getenv('CIRCLE_PR_NUMBER');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getCommit()
     {
         return getenv('CIRCLE_SHA1');

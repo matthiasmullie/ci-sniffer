@@ -56,6 +56,14 @@ class Appveyor implements Environment
     /**
      * {@inheritdoc}
      */
+    public function getPullRequest()
+    {
+        return getenv('APPVEYOR_PULL_REQUEST_NUMBER');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getCommit()
     {
         return getenv('APPVEYOR_REPO_COMMIT');

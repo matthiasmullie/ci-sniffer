@@ -62,6 +62,15 @@ class Drone implements Environment
     /**
      * {@inheritdoc}
      */
+    public function getPullRequest()
+    {
+        // @todo: whaaaaat?
+        return '';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getCommit()
     {
         return getenv('DRONE_COMMIT') ?: getenv('SVN_REVISION');

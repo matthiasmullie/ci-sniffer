@@ -34,6 +34,7 @@ echo $provider->getProvider();
 echo $provider->getRepo();
 echo $provider->getSlug();
 echo $provider->getBranch();
+echo $provider->getPullRequest();
 echo $provider->getCommit();
 echo $provider->getBuild();
 ```

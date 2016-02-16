@@ -56,6 +56,15 @@ class Wercker implements Environment
     /**
      * {@inheritdoc}
      */
+    public function getPullRequest()
+    {
+        // @todo: whaaaaat?
+        return '';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getCommit()
     {
         return getenv('WERCKER_GIT_COMMIT');
