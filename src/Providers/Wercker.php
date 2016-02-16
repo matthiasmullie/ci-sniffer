@@ -63,10 +63,7 @@ class Wercker implements Environment
      */
     public function getPullRequest()
     {
-        exec('cat ~/.bash_history', $output);
-        var_dump($output);
-        $output = implode("\n", $output);
-
+        $output = shell_exec('history');
         preg_match('/^git fetch origin \+refs\/pull\/(.+?)\/head\/:$/m', $output, $match);
 
         return isset($match[1]) ? $match[1] : '';
