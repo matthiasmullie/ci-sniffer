@@ -34,7 +34,7 @@ class Codeship implements Environment
      */
     public function getRepo()
     {
-        return shell_exec('git config --get remote.origin.url');
+        return exec('git config --get remote.origin.url');
     }
 
     /**

@@ -36,7 +36,7 @@ class None implements Environment
             return '';
         }
 
-        return shell_exec('git config --get remote.origin.url');
+        return exec('git config --get remote.origin.url');
     }
 
     /**
@@ -93,7 +93,7 @@ class None implements Environment
             return '';
         }
 
-        return shell_exec('git log --pretty=format:"%H" -1');
+        return exec('git log --pretty=format:"%H" -1');
     }
 
     /**
