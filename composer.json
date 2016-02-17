@@ -1,7 +1,7 @@
 {
   "name": "matthiasmullie/ci-sniffer",
   "type": "library",
-  "description": "Detects which CI environment the code is run in and lets you get common values",
+  "description": "Detects which CI environment the code is run and how to fetch details about the code being tested.",
   "keywords": [
     "php", "ci", "continuous integration", "environment"
   ],

@@ -1,9 +1,17 @@
-# ci-sniffer
+# CI sniffer
 
 [![Code quality](http://img.shields.io/scrutinizer/g/matthiasmullie/ci-sniffer.svg)](https://scrutinizer-ci.com/g/matthiasmullie/ci-sniffer)
 [![Latest version](http://img.shields.io/packagist/v/matthiasmullie/ci-sniffer.svg)](https://packagist.org/packages/matthiasmullie/ci-sniffer)
 [![Downloads total](http://img.shields.io/packagist/dt/matthiasmullie/ci-sniffer.svg)](https://packagist.org/packages/matthiasmullie/ci-sniffer)
 [![License](http://img.shields.io/packagist/l/matthiasmullie/ci-sniffer.svg)](https://github.com/matthiasmullie/ci-sniffer/blob/master/LICENSE)
+
+
+## Travis, is that you?
+
+All CI providers set some environment variables to let you know who they are and
+some additional info, but there's little consistency between how and what they
+expose. This will figure out what environment you're in and how to access some
+(sometimes hard to get) data in there, so you don't have to.
 
 
 ## Supported CI providers
@@ -20,6 +28,7 @@ Snap CI | [![](https://snap-ci.com/matthiasmullie/ci-sniffer/branch/master/build
 Travis CI | [![](https://api.travis-ci.org/matthiasmullie/ci-sniffer.svg?branch=master)](https://travis-ci.org/matthiasmullie/ci-sniffer)
 Wercker | [![](https://app.wercker.com/status/59efbc6ee4e16b13df426432000ad86a/s)](https://app.wercker.com/project/bykey/59efbc6ee4e16b13df426432000ad86a)
 
+
 ## Example usage
 
 ```php
@@ -30,15 +39,27 @@ $provider = $factory->getCurrent();
 echo $provider->getProvider(); // e.g. 'travis'
 
 // outputs data about the thing being tested
-echo $provider->getRepo(); // e.g. 'git@github.com:matthiasmullie/ci-sniffer.git'
+echo $provider->getRepo(); // e.g. 'https://github.com/matthiasmullie/ci-sniffer.git'
 echo $provider->getSlug(); // e.g. 'matthiasmullie/ci-sniffer'
-echo $provider->getBranch(); // e.g. 'master'
-echo $provider->getPullRequest(); // e.g. '1'
-echo $provider->getCommit(); // e.g. '0ed4fabf7ffa28f149f7940fa3eea4fa81c8bcf4'
-echo $provider->getBuild(); // e.g. '1'
+echo $provider->getBranch(); // e.g. 'master' (or '', when testing PR)
+echo $provider->getPullRequest(); // e.g. '1' (or '', when not testing PR)
+echo $provider->getCommit(); // e.g. '01081a9c908717bf315f992b814a36c7c9ba7e65'
+echo $provider->getBuild(); // e.g. '62.1'
 ```
 
-Or execute the binary (`bin/ci-sniffer`) to get all info in JSON format.
+Or execute the binary (`bin/ci-sniffer`) to get all info in JSON format. E.g.:
+
+```json
+{
+    "provider":"travis",
+    "repo":"https:\/\/github.com\/matthiasmullie\/ci-sniffer.git",
+    "slug":"matthiasmullie\/ci-sniffer",
+    "branch":"master",
+    "pr":"",
+    "commit":"01081a9c908717bf315f992b814a36c7c9ba7e65",
+    "build":"62.1"
+}
+```
 
 
 ## Installation
