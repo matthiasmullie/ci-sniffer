@@ -18,8 +18,7 @@ Jenkins | Supported!
 Shippable | [![](https://api.shippable.com/projects/56bdaae41895ca447473e35d/badge/master)](https://app.shippable.com/projects/56bdaae41895ca447473e35d)
 Snap CI | [![](https://snap-ci.com/matthiasmullie/ci-sniffer/branch/master/build_image)](https://snap-ci.com/matthiasmullie/ci-sniffer)
 Travis CI | [![](https://api.travis-ci.org/matthiasmullie/ci-sniffer.svg?branch=master)](https://travis-ci.org/matthiasmullie/ci-sniffer)
-Wercker | [![](https://app.wercker.com/status/28ed29f990ed347f218680c4d08369c8/s)](https://app.wercker.com/project/bykey/28ed29f990ed347f218680c4d08369c8)
-
+Wercker | [![](https://app.wercker.com/status/59efbc6ee4e16b13df426432000ad86a/s)](https://app.wercker.com/project/bykey/59efbc6ee4e16b13df426432000ad86a)
 
 ## Example usage
 
