@@ -28,18 +28,18 @@ $factory = new \MatthiasMullie\CI\Factory();
 $provider = $factory->getCurrent();
 
 // outputs 'travis', 'circle', ..., depending on what CI server the code is run
-echo $provider->getProvider();
+echo $provider->getProvider(); // e.g. 'travis'
 
 // outputs data about the thing being tested
-echo $provider->getRepo();
-echo $provider->getSlug();
-echo $provider->getBranch();
-echo $provider->getPullRequest();
-echo $provider->getCommit();
-echo $provider->getBuild();
+echo $provider->getRepo(); // e.g. 'git@github.com:matthiasmullie/ci-sniffer.git'
+echo $provider->getSlug(); // e.g. 'matthiasmullie/ci-sniffer'
+echo $provider->getBranch(); // e.g. 'master'
+echo $provider->getPullRequest(); // e.g. '1'
+echo $provider->getCommit(); // e.g. '0ed4fabf7ffa28f149f7940fa3eea4fa81c8bcf4'
+echo $provider->getBuild(); // e.g. '1'
 ```
 
-Or call the binary (`bin/ci-sniffer`) to get all info in JSON format.
+Or execute the binary (`bin/ci-sniffer`) to get all info in JSON format.
 
 
 ## Installation
