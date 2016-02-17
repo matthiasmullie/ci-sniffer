@@ -30,7 +30,7 @@ class EnvironmentTest extends PHPUnit_Framework_TestCase
 
     public function testGetRepo()
     {
-        $this->assertContains('matthiasmullie/ci-environment', $this->environment->getRepo());
+        $this->assertContains('matthiasmullie/ci-sniffer', $this->environment->getRepo());
 
         if ($this->isGitRepo()) {
             $none = new None();
@@ -40,7 +40,7 @@ class EnvironmentTest extends PHPUnit_Framework_TestCase
 
     public function testGetSlug()
     {
-        $this->assertEquals('matthiasmullie/ci-environment', $this->environment->getSlug());
+        $this->assertEquals('matthiasmullie/ci-sniffer', $this->environment->getSlug());
     }
 
     // branch can't be compared reliably: I can't fetch if by checking the git

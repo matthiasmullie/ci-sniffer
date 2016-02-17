@@ -10,5 +10,5 @@ test:
     - vendor/bin/phpunit
 
   post:
-    - bin/ci-environment
+    - bin/ci-sniffer
     - codecov

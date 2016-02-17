@@ -8,7 +8,7 @@ use MatthiasMullie\CI\Environment;
  * @see http://docs.drone.io/env.html
  * @see https://github.com/drone/drone/blob/a339b54905465cefe1ffed6eb80b2c7ef7a5c6d8/shared/build/build.go#L477
  *
- * @author Matthias Mullie <ci-environment@mullie.eu>
+ * @author Matthias Mullie <ci-sniffer@mullie.eu>
  * @copyright Copyright (c) 2016, Matthias Mullie. All rights reserved.
  * @license LICENSE MIT
  */

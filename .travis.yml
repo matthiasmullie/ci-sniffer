@@ -15,5 +15,5 @@ script:
   - vendor/bin/phpunit
 
 after_success:
-  - bin/ci-environment
+  - bin/ci-sniffer
   - codecov

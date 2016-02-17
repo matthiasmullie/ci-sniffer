@@ -1,17 +1,17 @@
 {
-  "name": "matthiasmullie/ci-environment",
+  "name": "matthiasmullie/ci-sniffer",
   "type": "library",
   "description": "Detects which CI environment the code is run in and lets you get common values",
   "keywords": [
     "php", "ci", "continuous integration", "environment"
   ],
-  "homepage": "http://github.com/matthiasmullie/ci-environment",
+  "homepage": "http://github.com/matthiasmullie/ci-sniffer",
   "license": "MIT",
   "authors": [
     {
       "name": "Matthias Mullie",
       "homepage": "http://www.mullie.eu",
-      "email": "ci-environment@mullie.eu",
+      "email": "ci-sniffer@mullie.eu",
       "role": "Developer"
     }
   ],
@@ -33,6 +33,6 @@
     }
   },
   "bin": [
-    "bin/ci-environment"
+    "bin/ci-sniffer"
   ]
 }

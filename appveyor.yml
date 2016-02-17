@@ -24,4 +24,4 @@ install:
 
 test_script:
   - vendor\bin\phpunit
-  - php bin\ci-environment
+  - php bin\ci-sniffer

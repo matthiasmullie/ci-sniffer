@@ -19,4 +19,4 @@ build:
     - script:
         name: output results
         code: |
-          bin/ci-environment
+          bin/ci-sniffer

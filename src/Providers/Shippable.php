@@ -7,7 +7,7 @@ use MatthiasMullie\CI\Environment;
 /**
  * @see http://docs.shippable.com/yml_reference/#standard-environment-variables
  *
- * @author Matthias Mullie <ci-environment@mullie.eu>
+ * @author Matthias Mullie <ci-sniffer@mullie.eu>
  * @copyright Copyright (c) 2016, Matthias Mullie. All rights reserved.
  * @license LICENSE MIT
  */
