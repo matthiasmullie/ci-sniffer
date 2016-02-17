@@ -38,3 +38,4 @@
 [1.0.0]: https://github.com/matthiasmullie/ci-sniffer/compare/ab538de31ace283fcbe74e4d66a67d0c229af5a1...1.0.0
 [1.0.1]: https://github.com/matthiasmullie/ci-sniffer/compare/1.0.0...1.0.1
 [1.0.2]: https://github.com/matthiasmullie/ci-sniffer/compare/1.0.1...1.0.2
+[1.1.0]: https://github.com/matthiasmullie/ci-sniffer/compare/1.0.2...1.1.0
