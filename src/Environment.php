@@ -59,6 +59,20 @@ interface Environment
     public function getCommit();
 
     /**
+     * Commit author name.
+     *
+     * @return string
+     */
+    public function getAuthor();
+
+    /**
+     * Commit author email address.
+     *
+     * @return string
+     */
+    public function getAuthorEmail();
+
+    /**
      * Build number.
      *
      * @return string

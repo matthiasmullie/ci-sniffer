@@ -57,6 +57,28 @@ class EnvironmentTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($none->getCommit(), $this->environment->getCommit());
     }
 
+    public function testGetAuthor()
+    {
+        if (!$this->isGitRepo()) {
+            $this->markTestSkipped("No git repo, can't compare.");
+        }
+
+        $none = new None();
+        $this->assertEquals($none->getAuthor(), $this->environment->getAuthor());
+    }
+
+    public function testGetAuthorEmail()
+    {
+        $this->assertContains('@', $this->environment->getAuthorEmail());
+
+        if (!$this->isGitRepo()) {
+            $this->markTestSkipped("No git repo, can't compare.");
+        }
+
+        $none = new None();
+        $this->assertEquals($none->getAuthorEmail(), $this->environment->getAuthorEmail());
+    }
+
     public function testNoBranchAndPullRequest()
     {
         $branch = $this->environment->getBranch();

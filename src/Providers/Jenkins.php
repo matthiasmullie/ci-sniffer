@@ -51,7 +51,7 @@ class Jenkins extends None implements Environment
      */
     public function getPullRequest()
     {
-        return getenv('ghprbPullId');
+        return getenv('ghprbPullId') ?: '';
     }
 
     /**
@@ -60,6 +60,22 @@ class Jenkins extends None implements Environment
     public function getCommit()
     {
         return getenv('ghprbActualCommit') ?: getenv('GIT_COMMIT');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAuthor()
+    {
+        return getenv('ghprbActualCommitAuthor') ?: parent::getAuthor();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAuthorEmail()
+    {
+        return getenv('ghprbActualCommitAuthorEmail') ?: parent::getAuthor();
     }
 
     /**

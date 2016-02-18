@@ -64,6 +64,22 @@ class Appveyor extends None implements Environment
     /**
      * {@inheritdoc}
      */
+    public function getAuthor()
+    {
+        return getenv('APPVEYOR_REPO_COMMIT_AUTHOR');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAuthorEmail()
+    {
+        return getenv('APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getBuild()
     {
         return getenv('APPVEYOR_BUILD_NUMBER');

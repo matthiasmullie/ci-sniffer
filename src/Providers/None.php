@@ -99,6 +99,30 @@ class None implements Environment
     /**
      * {@inheritdoc}
      */
+    public function getAuthor()
+    {
+        if (!$this->isGitRepo()) {
+            return '';
+        }
+
+        return exec('git log --pretty=format:"%aN" -1');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAuthorEmail()
+    {
+        if (!$this->isGitRepo()) {
+            return '';
+        }
+
+        return exec('git log --pretty=format:"%aE" -1');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getBuild()
     {
         return '';

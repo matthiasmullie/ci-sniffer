@@ -1,8 +1,11 @@
 # Changelog
 
 
-## [1.1.1] - 2016-02-18
-# Changed
+## [1.2.0] - 2016-02-18
+### Added
+- Report commit author & email address
+
+### Changed
 - Removed duplicate code by letting all providers inherit from fallback class
 
 ### Fixed
@@ -10,7 +13,7 @@
 
 
 ## [1.1.0] - 2016-02-17
-# Changed
+### Changed
 - Renamed project to ci-sniffer
 - Renamed bin/ci-environment to ci-sniffer
 
@@ -48,3 +51,4 @@
 [1.0.1]: https://github.com/matthiasmullie/ci-sniffer/compare/1.0.0...1.0.1
 [1.0.2]: https://github.com/matthiasmullie/ci-sniffer/compare/1.0.1...1.0.2
 [1.1.0]: https://github.com/matthiasmullie/ci-sniffer/compare/1.0.2...1.1.0
+[1.2.0]: https://github.com/matthiasmullie/ci-sniffer/compare/1.1.0...1.2.0
