@@ -59,6 +59,17 @@ interface Environment
     public function getCommit();
 
     /**
+     * Hash of the commit prior to the one being tested.
+     * Could be useful for anyone logging test runs to know if all commits have
+     * been tested or not: in case multiple commits are pushed at once, only the
+     * last commit is tested & the previous commit id will not match the last
+     * one that was logged.
+     *
+     * @return string
+     */
+    public function getPreviousCommit();
+
+    /**
      * Commit author name.
      *
      * @return string

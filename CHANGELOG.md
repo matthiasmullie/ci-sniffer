@@ -4,6 +4,7 @@
 ## [1.2.0] - 2016-02-18
 ### Added
 - Report commit author & email address
+- Report previous commit
 
 ### Changed
 - Removed duplicate code by letting all providers inherit from fallback class

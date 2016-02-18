@@ -15,6 +15,7 @@ echo json_encode(array(
     'branch' => $environment->getBranch(),
     'pr' => $environment->getPullRequest(),
     'commit' => $environment->getCommit(),
+    'previous-commit' => $environment->getPreviousCommit(),
     'author' => $environment->getAuthor(),
     'author-email' => $environment->getAuthorEmail(),
     'build' => $environment->getBuild(),
