@@ -133,6 +133,17 @@ class None implements Environment
     }
 
     /**
+     * Git has an exact ISO 8601 format (only since August 2014): %aI.
+     * However, since it's relatively young, it isn't yet available
+     * everywhere. There's another very similar format, though: %ai.
+     *
+     * This is an example of what %ai gives, and what it should look like:
+     * Current: 2016-02-18T16:02:46+01:00
+     * Correct: 2016-02-18 16:02:46 +0100
+     * Close enough. Let's just transform it to how we want it to look...
+     *
+     * @see https://github.com/git/git/commit/466fb6742d7fb7d3e6994b2d0d8db83a8786ebcf
+     *
      * {@inheritdoc}
      */
     public function getTimestamp()
@@ -141,21 +152,6 @@ class None implements Environment
             return '';
         }
 
-        /*
-         * Exact ISO 8601 format, only available since August 2014
-         * @see https://github.com/git/git/commit/466fb6742d7fb7d3e6994b2d0d8db83a8786ebcf
-         */
-        $timestamp = exec('git log --pretty=format:"%aI" -1');
-        if ($timestamp !== '%aI') {
-            return $timestamp;
-        }
-
-        /*
-         * This is an example of what %ai gives, and what it should look like:
-         * Current: 2016-02-18T16:02:46+01:00
-         * Correct: 2016-02-18 16:02:46 +0100
-         * Close enough. Let's just transform it to how we want it to look...
-         */
         $timestamp = exec('git log --pretty=format:"%ai" -1');
         $timestamp = preg_replace('/ /', 'T', $timestamp, 1);
         $timestamp = str_replace(' ', '', $timestamp);
