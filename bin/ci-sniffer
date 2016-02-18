@@ -13,7 +13,7 @@ echo json_encode(array(
     'repo' => $environment->getRepo(),
     'slug' => $environment->getSlug(),
     'branch' => $environment->getBranch(),
-    'pr' => $environment->getPullRequest(),
+    'pull-request' => $environment->getPullRequest(),
     'commit' => $environment->getCommit(),
     'previous-commit' => $environment->getPreviousCommit(),
     'author' => $environment->getAuthor(),

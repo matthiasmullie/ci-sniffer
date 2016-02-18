@@ -8,6 +8,7 @@
 
 ### Changed
 - Removed duplicate code by letting all providers inherit from fallback class
+- Changed binary's JSON key 'pr' to 'pull-request'
 
 ### Fixed
 - Don't cause errors when file required for PR testing doesn't exist
