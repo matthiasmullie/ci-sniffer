@@ -5,6 +5,9 @@
 # Changed
 - Removed duplicate code by letting all providers inherit from fallback class
 
+### Fixed
+- Don't cause errors when file required for PR testing doesn't exist
+
 
 ## [1.1.0] - 2016-02-17
 # Changed

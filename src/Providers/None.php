@@ -77,7 +77,7 @@ class None implements Environment
             return '';
         }
 
-        $head = shell_exec('cat .git/FETCH_HEAD');
+        $head = shell_exec('test -f .git/FETCH_HEAD && cat .git/FETCH_HEAD');
         $commit = preg_quote($this->getCommit(), '/');
         preg_match("/^$commit\\s+'refs\\/pull\\/(.+)\\/head'/m", $head, $match);
 
