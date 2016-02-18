@@ -48,6 +48,7 @@ class Codeship extends None implements Environment
     public function getPullRequest()
     {
         $pr = getenv('CI_PULL_REQUEST');
+
         return $pr !== 'false' ? $pr : '';
     }
 

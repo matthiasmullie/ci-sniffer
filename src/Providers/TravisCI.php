@@ -59,6 +59,7 @@ class TravisCI extends None implements Environment
     public function getPullRequest()
     {
         $pr = getenv('TRAVIS_PULL_REQUEST');
+
         return $pr !== 'false' ? $pr : '';
     }
 

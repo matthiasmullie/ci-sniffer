@@ -59,6 +59,7 @@ class Shippable extends None implements Environment
     public function getPullRequest()
     {
         $pr = getenv('PULL_REQUEST');
+
         return $pr !== 'false' ? $pr : '';
     }
 

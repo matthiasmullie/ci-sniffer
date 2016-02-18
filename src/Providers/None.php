@@ -141,7 +141,7 @@ class None implements Environment
             return '';
         }
 
-        /**
+        /*
          * Exact ISO 8601 format, only available since August 2014
          * @see https://github.com/git/git/commit/466fb6742d7fb7d3e6994b2d0d8db83a8786ebcf
          */
@@ -160,6 +160,7 @@ class None implements Environment
         $timestamp = preg_replace('/ /', 'T', $timestamp, 1);
         $timestamp = str_replace(' ', '', $timestamp);
         $timestamp = preg_replace('/([0-5]{2})([0-5]{2})$/', '$1:$2', $timestamp);
+
         return $timestamp;
     }
 
