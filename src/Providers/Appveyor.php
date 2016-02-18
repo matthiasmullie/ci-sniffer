@@ -78,11 +78,20 @@ class Appveyor extends None implements Environment
     }
 
     /**
+     * Appveyor has a APPVEYOR_REPO_COMMIT_TIMESTAMP, but it contains this:
+     * Expected:                       2016-02-18T16:18:39+01:00
+     * APPVEYOR_REPO_COMMIT_TIMESTAMP: 2016-02-18T15:18:39.0000000Z
+     * Note how it converted the time to UTC (and has some weird formatting
+     * where it adds decimal fraction to the minutes...)
+     * I decided against using APPVEYOR_REPO_COMMIT_TIMESTAMP and just using
+     * what git gives us and only keep it around as fallback (though it should
+     * never be used)
+     *
      * {@inheritdoc}
      */
     public function getTimestamp()
     {
-        return getenv('APPVEYOR_REPO_COMMIT_TIMESTAMP');
+        return parent::getTimestamp() ?: getenv('APPVEYOR_REPO_COMMIT_TIMESTAMP');
     }
 
     /**
