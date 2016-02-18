@@ -75,7 +75,7 @@ class Jenkins extends None implements Environment
      */
     public function getAuthorEmail()
     {
-        return getenv('ghprbActualCommitAuthorEmail') ?: parent::getAuthor();
+        return getenv('ghprbActualCommitAuthorEmail') ?: parent::getAuthorEmail();
     }
 
     /**
