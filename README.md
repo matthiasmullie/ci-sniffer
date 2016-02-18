@@ -47,6 +47,7 @@ echo $provider->getCommit(); // e.g. '01081a9c908717bf315f992b814a36c7c9ba7e65'
 echo $provider->getPreviousCommit(); // e.g. '45da9806d50c98f9c88dc0049303cf039b93a95b'
 echo $provider->getAuthor(); // e.g. 'Matthias Mullie'
 echo $provider->getAuthorEmail(); // e.g. 'ci-sniffer@mullie.eu'
+echo $provider->getTimestamp(); // e.g. '2016-02-17T18:36:49+01:00'
 echo $provider->getBuild(); // e.g. '62.1'
 ```
 
@@ -63,6 +64,7 @@ Or execute the binary (`bin/ci-sniffer`) to get all info in JSON format. E.g.:
     "previous-commit":"45da9806d50c98f9c88dc0049303cf039b93a95b",
     "author":"Matthias Mullie",
     "author-email":"ci-sniffer@mullie.eu",
+    "timestamp":"2016-02-17T18:36:49+01:00",
     "build":"62.1"
 }
 ```

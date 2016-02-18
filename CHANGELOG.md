@@ -5,6 +5,7 @@
 ### Added
 - Report commit author & email address
 - Report previous commit
+- Report commit timestamp
 
 ### Changed
 - Removed duplicate code by letting all providers inherit from fallback class

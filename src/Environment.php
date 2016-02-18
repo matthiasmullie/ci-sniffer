@@ -84,6 +84,14 @@ interface Environment
     public function getAuthorEmail();
 
     /**
+     * Date when the commit was applied (= committer date, not author date), in
+     * ISO 8601 format (e.g. 2016-02-18T15:42:27+01:00).
+     *
+     * @return string
+     */
+    public function getTimestamp();
+
+    /**
      * Build number.
      *
      * @return string

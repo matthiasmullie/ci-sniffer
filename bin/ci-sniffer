@@ -18,5 +18,6 @@ echo json_encode(array(
     'previous-commit' => $environment->getPreviousCommit(),
     'author' => $environment->getAuthor(),
     'author-email' => $environment->getAuthorEmail(),
+    'timestamp' => $environment->getTimestamp(),
     'build' => $environment->getBuild(),
 ));

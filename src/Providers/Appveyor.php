@@ -80,6 +80,14 @@ class Appveyor extends None implements Environment
     /**
      * {@inheritdoc}
      */
+    public function getTimestamp()
+    {
+        return getenv('APPVEYOR_REPO_COMMIT_TIMESTAMP');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getBuild()
     {
         return getenv('APPVEYOR_BUILD_NUMBER');

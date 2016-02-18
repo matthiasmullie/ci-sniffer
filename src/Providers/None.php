@@ -135,6 +135,18 @@ class None implements Environment
     /**
      * {@inheritdoc}
      */
+    public function getTimestamp()
+    {
+        if (!$this->isGitRepo()) {
+            return '';
+        }
+
+        return exec('git log --pretty=format:"%aI" -1');
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function getBuild()
     {
         return '';
