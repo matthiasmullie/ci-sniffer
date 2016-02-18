@@ -11,7 +11,7 @@ use MatthiasMullie\CI\Environment;
  * @copyright Copyright (c) 2016, Matthias Mullie. All rights reserved.
  * @license LICENSE MIT
  */
-class TravisCI implements Environment
+class TravisCI extends None implements Environment
 {
     /**
      * {@inheritdoc}

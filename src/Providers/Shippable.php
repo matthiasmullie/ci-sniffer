@@ -11,7 +11,7 @@ use MatthiasMullie\CI\Environment;
  * @copyright Copyright (c) 2016, Matthias Mullie. All rights reserved.
  * @license LICENSE MIT
  */
-class Shippable implements Environment
+class Shippable extends None implements Environment
 {
     /**
      * {@inheritdoc}

@@ -11,7 +11,7 @@ use MatthiasMullie\CI\Environment;
  * @copyright Copyright (c) 2016, Matthias Mullie. All rights reserved.
  * @license LICENSE MIT
  */
-class Wercker implements Environment
+class Wercker extends None implements Environment
 {
     /**
      * {@inheritdoc}
@@ -51,23 +51,6 @@ class Wercker implements Environment
     public function getBranch()
     {
         return $this->getPullRequest() === '' ? getenv('WERCKER_GIT_BRANCH') : '';
-    }
-
-    /**
-     * @todo Current code is a workaround until Wercker adds an environment
-     * variable to fetch it.
-     *
-     * @see https://github.com/wercker/support/issues/19
-     *
-     * {@inheritdoc}
-     */
-    public function getPullRequest()
-    {
-        $head = shell_exec('cat .git/FETCH_HEAD');
-        $commit = preg_quote($this->getCommit(), '/');
-        preg_match("/^$commit\\s+'refs\\/pull\\/(.+)\\/head'/m", $head, $match);
-
-        return isset($match[1]) ? $match[1] : '';
     }
 
     /**

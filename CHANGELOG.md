@@ -1,7 +1,13 @@
 # Changelog
 
 
+## [1.1.1] - 2016-02-18
+# Changed
+- Removed duplicate code by letting all providers inherit from fallback class
+
+
 ## [1.1.0] - 2016-02-17
+# Changed
 - Renamed project to ci-sniffer
 - Renamed bin/ci-environment to ci-sniffer
 

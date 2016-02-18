@@ -11,7 +11,7 @@ use MatthiasMullie\CI\Environment;
  * @copyright Copyright (c) 2016, Matthias Mullie. All rights reserved.
  * @license LICENSE MIT
  */
-class Appveyor implements Environment
+class Appveyor extends None implements Environment
 {
     /**
      * {@inheritdoc}
@@ -27,14 +27,6 @@ class Appveyor implements Environment
     public function getProvider()
     {
         return 'appveyor';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getRepo()
-    {
-        return exec('git config --get remote.origin.url');
     }
 
     /**

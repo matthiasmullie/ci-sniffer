@@ -12,7 +12,7 @@ use MatthiasMullie\CI\Environment;
  * @copyright Copyright (c) 2016, Matthias Mullie. All rights reserved.
  * @license LICENSE MIT
  */
-class Jenkins implements Environment
+class Jenkins extends None implements Environment
 {
     /**
      * {@inheritdoc}
@@ -36,20 +36,6 @@ class Jenkins implements Environment
     public function getRepo()
     {
         return getenv('GIT_URL');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getSlug()
-    {
-        // when using any of the popular cloud git providers (or anything that's
-        // modeled after the same username\project model), the repo name will
-        // likely be included in this fashion... at least we can try :)
-        $url = $this->getRepo();
-        $found = preg_match('/([^:\/]+\/[^:\/]+?)(\.git|$)/', $url, $matches);
-
-        return $found ? $matches[1] : '';
     }
 
     /**

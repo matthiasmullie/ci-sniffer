@@ -11,7 +11,7 @@ use MatthiasMullie\CI\Environment;
  * @copyright Copyright (c) 2016, Matthias Mullie. All rights reserved.
  * @license LICENSE MIT
  */
-class Codeship implements Environment
+class Codeship extends None implements Environment
 {
     /**
      * {@inheritdoc}
@@ -27,27 +27,6 @@ class Codeship implements Environment
     public function getProvider()
     {
         return 'codeship';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getRepo()
-    {
-        return exec('git config --get remote.origin.url');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getSlug()
-    {
-        // only GitHub & BitBucket are supported; both will have repo urls that
-        // include the project slug in this format
-        $url = $this->getRepo();
-        preg_match('/([^:\/]+\/[^:\/]+?)(\.git|$)/', $url, $matches);
-
-        return $matches[1];
     }
 
     /**
