@@ -5,7 +5,7 @@ namespace MatthiasMullie\CI\Providers;
 use MatthiasMullie\CI\Environment;
 
 /**
- * @see http://docs.shippable.com/yml_reference/#standard-environment-variables
+ * @see http://docs.shippable.com/ci_configure/#using-environment-variables
  *
  * @author Matthias Mullie <ci-sniffer@mullie.eu>
  * @copyright Copyright (c) 2016, Matthias Mullie. All rights reserved.
@@ -42,7 +42,7 @@ class Shippable extends None implements Environment
      */
     public function getSlug()
     {
-        return getenv('REPO_NAME');
+        return getenv('REPO_FULL_NAME');
     }
 
     /**

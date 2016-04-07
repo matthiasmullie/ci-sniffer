@@ -1,6 +1,11 @@
 # Changelog
 
 
+## [1.2.1] - 2016-04-07
+### Fixed
+- Fixed repo slug on Shippable
+
+
 ## [1.2.0] - 2016-02-18
 ### Added
 - Report commit author & email address
@@ -55,3 +60,4 @@
 [1.0.2]: https://github.com/matthiasmullie/ci-sniffer/compare/1.0.1...1.0.2
 [1.1.0]: https://github.com/matthiasmullie/ci-sniffer/compare/1.0.2...1.1.0
 [1.2.0]: https://github.com/matthiasmullie/ci-sniffer/compare/1.1.0...1.2.0
+[1.2.1]: https://github.com/matthiasmullie/ci-sniffer/compare/1.2.0...1.2.1
