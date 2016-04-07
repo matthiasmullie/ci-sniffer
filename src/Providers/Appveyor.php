@@ -85,7 +85,7 @@ class Appveyor extends None implements Environment
      * where it adds decimal fraction to the minutes...)
      * I decided against using APPVEYOR_REPO_COMMIT_TIMESTAMP and just using
      * what git gives us and only keep it around as fallback (though it should
-     * never be used)
+     * never be used).
      *
      * {@inheritdoc}
      */
