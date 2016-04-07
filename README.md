@@ -23,7 +23,7 @@ Circle CI | [![](https://circleci.com/gh/matthiasmullie/ci-sniffer.svg?style=svg
 Codeship | [![](https://codeship.com/projects/d65fa110-b318-0133-2330-0e52fcdb9711/status?branch=master)](https://codeship.com/projects/133591)
 Drone | [![](https://drone.io/github.com/matthiasmullie/ci-sniffer/status.png)](https://drone.io/github.com/matthiasmullie/ci-sniffer)
 Jenkins | Supported!
-Shippable | [![](https://api.shippable.com/projects/56bdaae41895ca447473e35d/badge/master)](https://app.shippable.com/projects/56bdaae41895ca447473e35d)
+Shippable | [![](https://api.shippable.com/projects/56bdaae41895ca447473e35d/badge?branch=master)](https://app.shippable.com/projects/56bdaae41895ca447473e35d)
 Snap CI | [![](https://snap-ci.com/matthiasmullie/ci-sniffer/branch/master/build_image)](https://snap-ci.com/matthiasmullie/ci-sniffer)
 Travis CI | [![](https://api.travis-ci.org/matthiasmullie/ci-sniffer.svg?branch=master)](https://travis-ci.org/matthiasmullie/ci-sniffer)
 Wercker | [![](https://app.wercker.com/status/59efbc6ee4e16b13df426432000ad86a/s)](https://app.wercker.com/project/bykey/59efbc6ee4e16b13df426432000ad86a)
